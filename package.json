@@ -8,7 +8,7 @@
     "jest": "^20.0.4",
     "react-test-renderer": "^16.0.0-alpha.12",
     "babel-jest": "^20.0.3",
-    "babel-preset-react-native": "^2.0.1",
+    "babel-preset-react-native": "^2.0.1"
   },
   "peerDependencies": {
     "react": "*",
@@ -28,7 +28,7 @@
   ],
   "author": {
     "name": "Timson",
-    "email": "516180119@qq.com",
+    "email": "516180119@qq.com"
   },
   "license": "ISC",
   "bugs": {
