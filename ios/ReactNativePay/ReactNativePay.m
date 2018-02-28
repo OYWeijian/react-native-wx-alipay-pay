@@ -16,14 +16,16 @@
 RCT_EXPORT_MODULE();
 
 
-RCT_EXPORT_METHOD(onAliPay:(NSString *)orderString  resolver:(RCTPromiseResolveBlock)resolve rejecter:(RCTPromiseRejectBlock)reject) {
+RCT_EXPORT_METHOD(onAliPay:(NSDictionary *)orderString  resolver:(RCTPromiseResolveBlock)resolve rejecter:(RCTPromiseRejectBlock)reject) {
     
+    NSString *orderStr = orderString[@"orderString"];
+    NSLog(@"%@", orderStr);
     // NOTE: 调用支付结果开始支付
-    if (orderString != nil)    {
-        
-        NSString *appScheme = @"BookTellerAlipay";
-        
-        [[AlipaySDK defaultService] payOrder:orderString fromScheme:appScheme callback:^(NSDictionary *resultDic) {
+    if (orderStr != nil)    {
+
+        NSString *appScheme = @"testWXPay"; // app中独立的scheme，用于支付宝返回的结果正确跳回商户app
+
+        [[AlipaySDK defaultService] payOrder:orderStr fromScheme:appScheme callback:^(NSDictionary *resultDic) {
             //支付回调
             NSString *resultStatus = [resultDic objectForKey:@"resultStatus"];
             if ([resultStatus isEqualToString:@"9000"]){ //订单支付成功
@@ -59,4 +61,5 @@ RCT_EXPORT_METHOD(onWxPay:(NSDictionary *)info resolver:(RCTPromiseResolveBlock)
 }
 
 @end
+
 
