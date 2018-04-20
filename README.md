@@ -2,6 +2,7 @@
 > react-native版 微信支付，支付宝 插件
 > 本插件基于 [xiaozhicheng/react-native-pay](https://github.com/xiaozhicheng/react-native-pay) 做了bug修补
 
+<<<<<<< HEAD
 # Link
 
 ## CMD
@@ -73,8 +74,3 @@ Pay.onWxPay(wxObj).then(e => console.info(e)).catch(err => alert(err))
 
 Pay.onAliPay(aliObj).then(e => console.info(e)).catch(err => alert(err))
 ```
-
-#  Contributor
-[OYWeijian](https://github.com/OYWeijian)
-<!-- This project exists thanks to all the people who contribute. [[Contribute]](CONTRIBUTING.md). -->
-<!-- ![](https://avatars3.githubusercontent.com/u/15721842?s=460&v=4 OYWeijian) -->
